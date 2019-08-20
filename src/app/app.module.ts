@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 
 import { EnvironmentUrlService } from './_services/environment-url.service';
 import { RepositoryService } from './_services/repository.service';
-import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
+import { ErrorHandlerService } from './_services/error-handler.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { InternalServerComponent } from './error-pages/internal-server/internal-
   ],
   providers: [
     EnvironmentUrlService,
-    RepositoryService
+    RepositoryService,
+    ErrorHandlerService
   ],
   bootstrap: [AppComponent]
 })
