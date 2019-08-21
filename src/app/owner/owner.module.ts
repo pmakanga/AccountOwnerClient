@@ -6,16 +6,26 @@ import { SharedModule } from '../shared/shared.module';
 import { OwnerComponent } from './owner.component';
 import { OwnerListComponent } from './owner-list/owner-list.component';
 import { OwnerDetailsComponent } from './owner-details/owner-details.component';
+import { OwnerCreateComponent } from './owner-create/owner-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { OwnerUpdateComponent } from './owner-update/owner-update.component';
+import { OwnerDeleteComponent } from './owner-delete/owner-delete.component';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
+    ReactiveFormsModule,
+    NgbModule,
     RouterModule.forChild([
       { path: 'list', component: OwnerListComponent },
-      { path: 'details/:id', component: OwnerDetailsComponent}
+      { path: 'details/:id', component: OwnerDetailsComponent },
+      { path: 'create', component: OwnerCreateComponent },
+      { path: 'update/:id', component: OwnerUpdateComponent },
+      { path: 'delete/:id', component: OwnerDeleteComponent }
     ])
   ],
-  declarations: [OwnerComponent, OwnerListComponent, OwnerDetailsComponent]
+  declarations: [OwnerComponent, OwnerListComponent, OwnerDetailsComponent, OwnerCreateComponent, OwnerUpdateComponent, OwnerDeleteComponent]
 })
 export class OwnerModule { }

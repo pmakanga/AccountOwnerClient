@@ -9,15 +9,16 @@ import { DatepickerDirective } from './directives/datepicker.directive';
 @NgModule({
    declarations: [
       ErrorModalComponent,
-      SuccessModalComponent
+      SuccessModalComponent,
+      DatepickerDirective
    ],
    imports: [
-      CommonModule,
-      DatepickerDirective
+      CommonModule
    ],
    exports: [
       ErrorModalComponent,
-      SuccessModalComponent
+      SuccessModalComponent,
+      DatepickerDirective
    ]
 })
 export class SharedModule { }

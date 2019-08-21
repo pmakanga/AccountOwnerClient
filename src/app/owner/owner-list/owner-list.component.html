@@ -1,7 +1,7 @@
 <div class="container">
         <div class="row"> 
                 <div class="col-md-offset-10 col-md-2">
-                  <a href="#">Create owner</a>
+                  <a [routerLink]="['/owner/create']">Create owner</a>
                 </div>
               </div>
               <br>
@@ -25,8 +25,8 @@
                           <td>{{owner.address}}</td>
                           <td>{{owner.dateOfBirth | date: 'dd/MM/yyyy'}}</td>
                           <td><button type="button" id="details" class="btn btn-default"(click)="getOwnerDetails(owner.id)">Details</button></td>
-                          <td><button type="button" id="update" class="btn btn-success">Update</button></td>
-                          <td><button type="button" id="delete" class="btn btn-danger">Delete</button></td>
+                          <td><button type="button" id="update" class="btn btn-success"(click)="redirectToUpdatePage(owner.id)">Update</button></td>
+                          <td><button type="button" id="delete" class="btn btn-danger"(click)="redirectToDeletePage(owner.id)">Delete</button></td>
                         </tr>
                       </tbody>
                     </table>

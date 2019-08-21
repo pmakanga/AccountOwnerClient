@@ -35,7 +35,7 @@ constructor(private router: Router) { }
 
   private handleOtherError(error: HttpErrorResponse) {
     this.createErrorMessage(error);
-    //TODO: this will be fixed later;
+    $('#errorModal').modal();
   }
 
   private createErrorMessage(error: HttpErrorResponse) {

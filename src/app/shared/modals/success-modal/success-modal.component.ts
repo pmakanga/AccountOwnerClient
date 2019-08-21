@@ -14,6 +14,10 @@ export class SuccessModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
+  }
+
+  public emmitEvent() {
     this.redirectOnOK.emit();
   }
 
